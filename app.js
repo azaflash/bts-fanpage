@@ -4,43 +4,43 @@ const appData = {
       name: 'RM',
       role: 'Leader · Rapper',
       bio: 'The voice of BTS, known for sharp lyricism and powerful storytelling.',
-      photo: 'https://upload.wikimedia.org/wikipedia/commons/2/20/RM_at_the_United_Nations_2021_%28cropped%29.png'
+      photo: 'assets/rm.png'
     },
     {
       name: 'Jin',
       role: 'Vocalist',
       bio: 'Warm, expressive, and iconic for his classic vocals and bright stage presence.',
-      photo: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Jin_at_the_United_Nations_2021_%28cropped%29.png'
+      photo: 'assets/jin.png'
     },
     {
       name: 'Suga',
       role: 'Rapper · Producer',
       bio: 'A layered producer with a distinct sound and deeply personal lyrical style.',
-      photo: 'https://upload.wikimedia.org/wikipedia/commons/a/a2/SUGA_at_the_United_Nations_2021_%28cropped%29.png'
+      photo: 'assets/suga.png'
     },
     {
       name: 'J-Hope',
       role: 'Rapper · Dancer',
       bio: 'The spark that brings energy, movement, and unstoppable positivity to every stage.',
-      photo: 'https://upload.wikimedia.org/wikipedia/commons/0/0f/J-Hope_at_the_United_Nations_2021_%28cropped%29.png'
+      photo: 'assets/jhope.png'
     },
     {
       name: 'Jimin',
       role: 'Vocalist · Dancer',
       bio: 'Known for elegance, emotion, and choreography that instantly commands attention.',
-      photo: 'https://upload.wikimedia.org/wikipedia/commons/5/5d/Jimin_at_the_United_Nations_2021_%28cropped%29.png'
+      photo: 'assets/jimin.png'
     },
     {
       name: 'V',
       role: 'Vocalist',
       bio: 'A voice with depth and a visual presence that feels timeless and unforgettable.',
-      photo: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/V_at_the_United_Nations_2021_%28cropped%29.png'
+      photo: 'assets/v.png'
     },
     {
       name: 'Jungkook',
       role: 'Main Vocalist',
       bio: 'The all-rounder who blends power, charm, and versatility in every performance.',
-      photo: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Jungkook_at_the_United_Nations_2021_%28cropped%29.png'
+      photo: 'assets/jungkook.png'
     }
   ],
   songs: [
@@ -55,29 +55,26 @@ const appData = {
     {
       title: 'Map of the Soul: 7',
       year: 2020,
-      cover: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80',
+      cover: 'assets/map7.jpg',
       blurb: 'A reflective, emotional chapter that explores identity and self-discovery.'
     },
     {
       title: 'Be',
       year: 2020,
-      cover: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80',
+      cover: 'assets/be.jpg',
       blurb: 'A sincere collection centered on comfort, healing, and connection.'
     },
     {
       title: 'Love Yourself: Tear',
       year: 2018,
-      cover: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=900&q=80',
+      cover: 'assets/tear.jpg',
       blurb: 'A cinematic album filled with emotional risk and powerful musical range.'
     }
   ]
 };
 
-const svgPlaceholder = encodeURIComponent(`<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'>
-  <rect width='100%' height='100%' fill='%2311161a' />
-  <text x='50%' y='50%' fill='%23b2bece' font-size='36' font-family='Inter, Arial, sans-serif' dominant-baseline='middle' text-anchor='middle'>Image unavailable</text>
-</svg>`);
+// svg placeholder encoded as data URI
+const svgPlaceholder = encodeURIComponent(`<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'>\n  <rect width='100%' height='100%' fill='%2311161a' />\n  <text x='50%' y='50%' fill='%23b2bece' font-size='36' font-family='Inter, Arial, sans-serif' dominant-baseline='middle' text-anchor='middle'>Image unavailable</text>\n</svg>`);
 
 const renderMembers = () => {
   const membersList = document.getElementById('members-list');
@@ -213,7 +210,7 @@ const escapeHtml = (value) => {
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
+    .replace(/\"/g, '&quot;')
     .replace(/'/g, '&#039;');
 };
 
