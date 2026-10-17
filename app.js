@@ -4,43 +4,43 @@ const appData = {
       name: 'RM',
       role: 'Leader · Rapper',
       bio: 'The voice of BTS, known for sharp lyricism and powerful storytelling.',
-      photo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/RM_for_Marie_Claire_Korea_2021_%28cropped%29.png'
+      photo: 'https://upload.wikimedia.org/wikipedia/commons/2/20/RM_at_the_United_Nations_2021_%28cropped%29.png'
     },
     {
       name: 'Jin',
       role: 'Vocalist',
       bio: 'Warm, expressive, and iconic for his classic vocals and bright stage presence.',
-      photo: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Jin_for_Dispatch_White_Day_Event_on_March_2022_%28cropped%29.png'
+      photo: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Jin_at_the_United_Nations_2021_%28cropped%29.png'
     },
     {
       name: 'Suga',
       role: 'Rapper · Producer',
       bio: 'A layered producer with a distinct sound and deeply personal lyrical style.',
-      photo: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Suga_for_Dispatch_White_Day_Event_on_March_2022_%28cropped%29.png'
+      photo: 'https://upload.wikimedia.org/wikipedia/commons/a/a2/SUGA_at_the_United_Nations_2021_%28cropped%29.png'
     },
     {
       name: 'J-Hope',
       role: 'Rapper · Dancer',
       bio: 'The spark that brings energy, movement, and unstoppable positivity to every stage.',
-      photo: 'https://upload.wikimedia.org/wikipedia/commons/c/ca/J-Hope_on_KBS_Music_Bank_on_March_2%2C_2018_%28cropped%29.png'
+      photo: 'https://upload.wikimedia.org/wikipedia/commons/0/0f/J-Hope_at_the_United_Nations_2021_%28cropped%29.png'
     },
     {
       name: 'Jimin',
       role: 'Vocalist · Dancer',
       bio: 'Known for elegance, emotion, and choreography that instantly commands attention.',
-      photo: 'https://upload.wikimedia.org/wikipedia/commons/8/8c/Jimin_at_The_Fact_Music_Awards_on_April_24%2C_2019_%28cropped%29.jpg'
+      photo: 'https://upload.wikimedia.org/wikipedia/commons/5/5d/Jimin_at_the_United_Nations_2021_%28cropped%29.png'
     },
     {
       name: 'V',
       role: 'Vocalist',
       bio: 'A voice with depth and a visual presence that feels timeless and unforgettable.',
-      photo: 'https://upload.wikimedia.org/wikipedia/commons/a/a2/V_for_Dispatch_White_Day_Event_on_March_2022_%28cropped%29.png'
+      photo: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/V_at_the_United_Nations_2021_%28cropped%29.png'
     },
     {
       name: 'Jungkook',
       role: 'Main Vocalist',
       bio: 'The all-rounder who blends power, charm, and versatility in every performance.',
-      photo: 'https://upload.wikimedia.org/wikipedia/commons/5/55/Jungkook_for_Dispatch_White_Day_Event_on_March_2022_%28cropped%29.png'
+      photo: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Jungkook_at_the_United_Nations_2021_%28cropped%29.png'
     }
   ],
   songs: [
@@ -73,6 +73,12 @@ const appData = {
   ]
 };
 
+const svgPlaceholder = encodeURIComponent(`<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'>
+  <rect width='100%' height='100%' fill='%2311161a' />
+  <text x='50%' y='50%' fill='%23b2bece' font-size='36' font-family='Inter, Arial, sans-serif' dominant-baseline='middle' text-anchor='middle'>Image unavailable</text>
+</svg>`);
+
 const renderMembers = () => {
   const membersList = document.getElementById('members-list');
 
@@ -80,7 +86,7 @@ const renderMembers = () => {
     .map(
       (member) => `
         <article class="member-card">
-          <img src="${member.photo}" alt="${member.name}" />
+          <img src="${member.photo}" alt="${member.name}" loading="eager" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,${svgPlaceholder}';console.warn('Image failed to load for: ${member.name}');" />
           <div class="member-card-body">
             <h3>${member.name}</h3>
             <div class="member-role">${member.role}</div>
@@ -117,7 +123,7 @@ const renderAlbums = () => {
     .map(
       (album) => `
         <article class="album-card">
-          <img src="${album.cover}" alt="${album.title}" />
+          <img src="${album.cover}" alt="${album.title}" loading="eager" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,${svgPlaceholder}';console.warn('Album cover failed to load: ${album.title}');" />
           <div class="album-card-body">
             <h3>${album.title}</h3>
             <div class="album-meta">${album.year}</div>
