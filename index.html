@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BTS Pulse | Fan Magazine</title>
+    <meta name="description" content="BTS fan magazine featuring members, songs, albums, and community updates." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-wrap">
+        <span class="brand-mark">BTS</span>
+        <span class="brand-text">PULSE</span>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#members">Members</a>
+        <a href="#songs">Songs</a>
+        <a href="#albums">Albums</a>
+        <a href="#community">Community</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Fan Magazine</p>
+          <h1>Every beat, every story, every army moment.</h1>
+          <p class="lede">
+            Follow BTS through iconic songs, unforgettable albums, and the voices of fans who keep the energy alive.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#songs">Explore Songs</a>
+            <a class="secondary-btn" href="#community">Join the Chat</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card spotlight-card">
+            <span class="card-label">Featured</span>
+            <h2>Butter</h2>
+            <p>Global anthem • bright energy • all-time favorite</p>
+          </div>
+          <div class="hero-card quote-card">
+            <span class="card-label">Fan Quote</span>
+            <p>“The way BTS turns every emotion into a story is unreal.”</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="news-grid">
+        <article class="story story-featured">
+          <span class="tag">Top Story</span>
+          <h3>Why BTS keeps redefining pop culture</h3>
+          <p>
+            From lyrical storytelling to high-impact performances, BTS continues to shape the global music scene with authenticity and creativity.
+          </p>
+        </article>
+
+        <article class="story story-side">
+          <span class="tag">Trending</span>
+          <h3>Fan favorite tracks</h3>
+          <p>Spring Day, Dynamite, and Permission to Dance remain daily staples for millions of listeners.</p>
+        </article>
+
+        <article class="story story-side">
+          <span class="tag">Community</span>
+          <h3>Fan energy is still growing</h3>
+          <p>Across the world, ARMYs continue to share music, memories, and joy in every new release.</p>
+        </article>
+      </section>
+
+      <section id="members" class="panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Members</p>
+            <h2>Seven voices, one story</h2>
+          </div>
+        </div>
+        <div id="members-list" class="member-grid"></div>
+      </section>
+
+      <section id="songs" class="panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Songs</p>
+            <h2>Fan favorites</h2>
+          </div>
+        </div>
+        <div id="songs-list" class="song-list"></div>
+      </section>
+
+      <section id="albums" class="panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Albums</p>
+            <h2>Collections worth replaying</h2>
+          </div>
+        </div>
+        <div id="albums-list" class="album-grid"></div>
+      </section>
+
+      <section id="community" class="panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Fan Community</p>
+            <h2>Talk to fellow ARMYs</h2>
+          </div>
+        </div>
+
+        <div class="chat-shell">
+          <div class="chat-controls">
+            <button class="mode-btn active" data-mode="local">Local Demo</button>
+            <button class="mode-btn" data-mode="firebase">Firebase</button>
+            <button class="mode-btn" data-mode="issues">GitHub Issues</button>
+          </div>
+
+          <div id="chat-area" class="chat-area"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Made for BTS fans, by fans.</p>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
