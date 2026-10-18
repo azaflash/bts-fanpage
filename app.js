@@ -4,43 +4,43 @@ const appData = {
       name: 'RM',
       role: 'Leader · Rapper',
       bio: 'The voice of BTS, known for sharp lyricism and powerful storytelling.',
-      photo: 'assets/rm.png'
+      photo: 'images (1).jpg'
     },
     {
       name: 'Jin',
       role: 'Vocalist',
       bio: 'Warm, expressive, and iconic for his classic vocals and bright stage presence.',
-      photo: 'assets/jin.png'
+      photo: 'images (2).jpg'
     },
     {
       name: 'Suga',
       role: 'Rapper · Producer',
       bio: 'A layered producer with a distinct sound and deeply personal lyrical style.',
-      photo: 'assets/suga.png'
+      photo: 'images (3).jpg'
     },
     {
       name: 'J-Hope',
       role: 'Rapper · Dancer',
       bio: 'The spark that brings energy, movement, and unstoppable positivity to every stage.',
-      photo: 'assets/jhope.png'
+      photo: 'images (4).jpg'
     },
     {
       name: 'Jimin',
       role: 'Vocalist · Dancer',
       bio: 'Known for elegance, emotion, and choreography that instantly commands attention.',
-      photo: 'assets/jimin.png'
+      photo: 'images (5).jpg'
     },
     {
       name: 'V',
       role: 'Vocalist',
       bio: 'A voice with depth and a visual presence that feels timeless and unforgettable.',
-      photo: 'assets/v.png'
+      photo: 'images (6).jpg'
     },
     {
       name: 'Jungkook',
       role: 'Main Vocalist',
       bio: 'The all-rounder who blends power, charm, and versatility in every performance.',
-      photo: 'assets/jungkook.png'
+      photo: 'images (7).jpg'
     }
   ],
   songs: [
@@ -55,26 +55,29 @@ const appData = {
     {
       title: 'Map of the Soul: 7',
       year: 2020,
-      cover: 'assets/map7.jpg',
+      cover: 'images (8).jpg',
       blurb: 'A reflective, emotional chapter that explores identity and self-discovery.'
     },
     {
       title: 'Be',
       year: 2020,
-      cover: 'assets/be.jpg',
+      cover: 'images (9).jpg',
       blurb: 'A sincere collection centered on comfort, healing, and connection.'
     },
     {
       title: 'Love Yourself: Tear',
       year: 2018,
-      cover: 'assets/tear.jpg',
+      cover: 'images (10).jpg',
       blurb: 'A cinematic album filled with emotional risk and powerful musical range.'
     }
   ]
 };
 
-// svg placeholder encoded as data URI
-const svgPlaceholder = encodeURIComponent(`<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'>\n  <rect width='100%' height='100%' fill='%2311161a' />\n  <text x='50%' y='50%' fill='%23b2bece' font-size='36' font-family='Inter, Arial, sans-serif' dominant-baseline='middle' text-anchor='middle'>Image unavailable</text>\n</svg>`);
+const svgPlaceholder = encodeURIComponent(`<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'>
+  <rect width='100%' height='100%' fill='%2311161a' />
+  <text x='50%' y='50%' fill='%23b2bece' font-size='36' font-family='Inter, Arial, sans-serif' dominant-baseline='middle' text-anchor='middle'>Image unavailable</text>
+</svg>`);
 
 const renderMembers = () => {
   const membersList = document.getElementById('members-list');
