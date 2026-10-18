@@ -21,6 +21,7 @@
         <a href="#members">Members</a>
         <a href="#songs">Songs</a>
         <a href="#albums">Albums</a>
+        <a href="#gallery">Gallery</a>
         <a href="#community">Community</a>
       </nav>
     </header>
@@ -104,6 +105,16 @@
         <div id="albums-list" class="album-grid"></div>
       </section>
 
+      <section id="gallery" class="panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Moments</p>
+            <h2>More BTS memories</h2>
+          </div>
+        </div>
+        <div id="gallery-grid" class="member-grid"></div>
+      </section>
+
       <section id="community" class="panel">
         <div class="section-head">
           <div>
@@ -127,6 +138,12 @@
     <footer class="site-footer">
       <p>Made for BTS fans, by fans.</p>
     </footer>
+
+    <!-- Global audio player (hidden when no track loaded) -->
+    <div id="player" class="player" aria-hidden="true">
+      <div id="now-playing" class="now-playing">Not playing</div>
+      <audio id="audio-player" controls preload="none"></audio>
+    </div>
 
     <script type="module" src="app.js"></script>
   </body>
